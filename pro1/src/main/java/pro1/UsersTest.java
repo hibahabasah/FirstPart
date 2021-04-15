@@ -2,12 +2,13 @@ package pro1;
 
 import java.util.ArrayList;
 
-public class userstest {
-	ArrayList<users> user=new ArrayList<users>();
-	String found,pass=null;
+public class UsersTest {
+	ArrayList<Users> user=new ArrayList<Users>();
+	String found=null;
+	String pass=null; 
 	boolean check;
 	
-	public String find_admin(String string) {
+	public String findAdmin(String string) {
 
 		for (int i=0;i<user.size();i++) {
 			if (user.get(i).getusername().equalsIgnoreCase(string)) {
@@ -19,15 +20,15 @@ public class userstest {
 	}
 	
 	
-	public void add_users(String name, String pw) {
+	public void addUsers(String name, String pw) {
 		
-		users a=new users(name,pw);
+		Users a=new Users(name,pw);
 		user.add(a);
 
 	}
 	
 
-	public String check_passowrd(String s) {
+	public String checkPassowrd(String s) {
 
 		for (int j=0;j<user.size();j++) {
 			if (user.get(j).getusername().equalsIgnoreCase(s)) {
@@ -39,9 +40,12 @@ public class userstest {
 				
 	}
 	
-	public boolean check_username(String string){
+	
+	public boolean checkUsername(String string){
 
-		for(int m=0; m<user.size(); m++) {
+		int usersize = user.size();
+		
+		for(int m=0; m<usersize; m++) {
 				if(user.get(m).getusername().equalsIgnoreCase(string))
 				{
 					check=true;
@@ -52,8 +56,9 @@ public class userstest {
 					check=false;
 					return check;
 				}
-		}//for
+		}
 		return check;
 	}
 	
-}//class
+	
+}

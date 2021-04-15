@@ -1,18 +1,18 @@
 package pro1;
 
-public class books {
+public class Books {
 	private String title;
 	private String author;
 	private String signature;
-	private String ISBN;
+	private String isbn;
 	
-	public books(String t, String a, String s, String i) {
+	public Books(String t, String a, String s, String i) {
 		this.title = t  ;
 		this.author=a;
 		this.signature=s;
-		this.ISBN=i;
+		this.isbn=i;
 		
-	}//constructor
+	}
 	
 	public String gettitle() {
 		return title;
@@ -27,7 +27,7 @@ public class books {
 	}
 	
 	public String getISBN() {
-		return ISBN;
+		return isbn;
 	}
 	
 	public void setTitle(String t) {
@@ -40,9 +40,7 @@ public class books {
 
 	public void setSignature(String s) {
 		signature=s; 
-	}
+	}	
 
-	public void setISBN(String isbn) {
-		ISBN=isbn; 
-	}
+	
 }
